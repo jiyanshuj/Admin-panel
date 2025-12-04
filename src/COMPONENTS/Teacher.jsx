@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Camera, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 
 // Change this to localhost instead of 0.0.0.0
-const API_BASE = 'https://3a3cc97b71fd.ngrok-free.app';
+const API_BASE = 'https://65cabd00aa64.ngrok-free.app';
 
 function Teacher() {
   const [page, setPage] = useState('home');

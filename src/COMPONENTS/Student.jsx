@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Camera, CheckCircle, XCircle, AlertCircle, Zap, Play } from 'lucide-react';
 
-const API_BASE ='https://3a3cc97b71fd.ngrok-free.app';
+const API_BASE ='https://65cabd00aa64.ngrok-free.appp';
 
 function Student() {
     const [page, setPage] = useState('home');
