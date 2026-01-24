@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Camera, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 
 // Change this to localhost instead of 0.0.0.0
-const API_BASE = 'https://65cabd00aa64.ngrok-free.app';
+const API_BASE = 'https://131218d5991a.ngrok-free.app';
 
 function Teacher() {
   const [page, setPage] = useState('home');
@@ -14,7 +14,7 @@ function Teacher() {
   const [videoReady, setVideoReady] = useState(false);
   const [showDataModal, setShowDataModal] = useState(false);
   const [teachers, setTeachers] = useState([]);
-  
+
   const [isRecognizing, setIsRecognizing] = useState(false);
   const [recognitionResult, setRecognitionResult] = useState(null);
 
@@ -209,7 +209,7 @@ function Teacher() {
 
     try {
       showNotification('Registering teacher... Please wait', 'info');
-      
+
       console.log('Sending registration request to:', `${API_BASE}/register/teacher`);
       console.log('Form data:', {
         name: formData.name,
@@ -241,7 +241,7 @@ function Teacher() {
       console.error('Registration error details:', err);
       console.error('Error name:', err.name);
       console.error('Error message:', err.message);
-      
+
       // More specific error messages
       if (err.name === 'TypeError' && err.message.includes('Failed to fetch')) {
         showNotification('Cannot connect to server. Make sure backend is running on http://localhost:8000', 'error');
@@ -430,14 +430,13 @@ function Teacher() {
   const NotificationBanner = () => {
     if (!notification) return null;
     return (
-      <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
-        notification.type === 'success' ? 'bg-green-100 text-green-800' :
-        notification.type === 'error' ? 'bg-red-100 text-red-800' :
-        'bg-blue-100 text-blue-800'
-      }`}>
+      <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${notification.type === 'success' ? 'bg-green-100 text-green-800' :
+          notification.type === 'error' ? 'bg-red-100 text-red-800' :
+            'bg-blue-100 text-blue-800'
+        }`}>
         {notification.type === 'success' ? <CheckCircle size={20} /> :
-         notification.type === 'error' ? <XCircle size={20} /> :
-         <AlertCircle size={20} />}
+          notification.type === 'error' ? <XCircle size={20} /> :
+            <AlertCircle size={20} />}
         {notification.message}
       </div>
     );
