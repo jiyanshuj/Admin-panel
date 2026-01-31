@@ -68,7 +68,7 @@ The admin panel connects to a Python backend through ngrok tunneling. When your 
 #### Step 1: Update `Student.jsx`
 - **File**: `src/COMPONENTS/Student.jsx`
 - **Line**: 3
-- **Current**: `const API_BASE = 'https://131218d5991a.ngrok-free.appp';`
+- **Current**: `const API_BASE = 'https://a8066c847fbb.ngrok-free.app';`
 - **Update To**: Replace with your new ngrok URL
   ```javascript
   const API_BASE = 'https://YOUR_NEW_NGROK_URL';
@@ -77,7 +77,7 @@ The admin panel connects to a Python backend through ngrok tunneling. When your 
 #### Step 2: Update `Teacher.jsx`
 - **File**: `src/COMPONENTS/Teacher.jsx`
 - **Line**: 5
-- **Current**: `const API_BASE = 'https://131218d5991a.ngrok-free.app';`
+- **Current**: `const API_BASE = 'https://a8066c847fbb.ngrok-free.app';`
 - **Update To**: Replace with your new ngrok URL
   ```javascript
   const API_BASE = 'https://YOUR_NEW_NGROK_URL';

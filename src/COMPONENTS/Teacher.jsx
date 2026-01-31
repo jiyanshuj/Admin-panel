@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Camera, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 
 // Change this to localhost instead of 0.0.0.0
-const API_BASE = 'https://131218d5991a.ngrok-free.app';
+const API_BASE = 'https://a8066c847fbb.ngrok-free.app';
 
 function Teacher() {
   const [page, setPage] = useState('home');
@@ -431,8 +431,8 @@ function Teacher() {
     if (!notification) return null;
     return (
       <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${notification.type === 'success' ? 'bg-green-100 text-green-800' :
-          notification.type === 'error' ? 'bg-red-100 text-red-800' :
-            'bg-blue-100 text-blue-800'
+        notification.type === 'error' ? 'bg-red-100 text-red-800' :
+          'bg-blue-100 text-blue-800'
         }`}>
         {notification.type === 'success' ? <CheckCircle size={20} /> :
           notification.type === 'error' ? <XCircle size={20} /> :
